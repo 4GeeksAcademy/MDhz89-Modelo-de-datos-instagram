@@ -44,8 +44,8 @@ class Follower(Base):
     id = Column(Integer, primary_key=True)
     image = Column(String(250))
     description = Column(String(250))
-    User_id = Column(Integer, ForeignKey('User.id'))
-    User_id = Column(Integer, ForeignKey('User.id'))
+    User_from_id = Column(Integer, ForeignKey('User.id'))
+    User_to_id= Column(Integer, ForeignKey('User.id'))
     user = relationship(User)
 
 
